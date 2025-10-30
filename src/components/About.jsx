@@ -50,6 +50,32 @@ export default function About({ darkMode }) {
             </p>
           </div>
         </div>
+
+        <div className="mt-10">
+          <h3 className="text-2xl font-bold mb-4">Projelerim</h3>
+          <p
+            className={`max-w-3xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-700"
+            }`}
+          >
+            Çeşitli projelerde yer aldım, bunlar arasında web uygulamaları ve
+            kullanıcı arayüzleri bulunmaktadır. Her projede kullanıcı geri
+            bildirimlerini dikkate alarak sürekli iyileştirme yapmayı
+            hedefliyorum.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <h3 className="text-2xl font-bold mb-4">İlgi Alanlarım</h3>
+          <p
+            className={`max-w-3xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-700"
+            }`}
+          >
+            Teknoloji, yapay zeka ve kullanıcı deneyimi tasarımı konularına ilgi
+            duyuyorum. Sürekli öğrenme ve kendimi geliştirme motivasyonum var.
+          </p>
+        </div>
       </div>
     </section>
   );
