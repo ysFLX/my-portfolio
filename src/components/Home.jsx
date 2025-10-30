@@ -15,8 +15,8 @@ export default function Home({ darkMode }) {
       >
         <h3 className="text-2xl font-semibold mb-4">Kısa Tanıtım</h3>
         <p className="mb-6">
-          Bu sayfa giriş (Home). Navbar üzerinden diğer sayfalara geçiş
-          yapabilirsiniz.
+          Buradan hakkımda kısa bir bilgi alabilir ve ziyaretçileri diğer
+          sayfalara yönlendirebilirsiniz.
         </p>
         <div className="flex justify-center gap-4">
           <button

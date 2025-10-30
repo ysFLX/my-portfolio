@@ -20,7 +20,7 @@ export default function Navbar({ darkMode, toggleDark }) {
           </NavLink>
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-6">
           <NavLink
             to="/"
             className={({ isActive }) => `${base} ${isActive ? active : ""}`}
@@ -50,7 +50,7 @@ export default function Navbar({ darkMode, toggleDark }) {
             aria-label="Toggle dark mode"
             className="px-3 py-1 rounded-md border"
           >
-            {darkMode ? "Light" : "Dark"}
+            {darkMode ? "Açık" : "Koyu"}
           </button>
         </div>
 
