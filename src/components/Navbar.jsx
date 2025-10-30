@@ -18,13 +18,6 @@ export default function Navbar({ darkMode, toggleDark }) {
           >
             ysFLX
           </NavLink>
-          <span
-            className={`hidden md:inline ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            React + Tailwind
-          </span>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
