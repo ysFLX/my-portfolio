@@ -17,7 +17,8 @@ export default function Hero({ darkMode }) {
             darkMode ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          React + Tailwind ile modern web siteleri yapıyorum.
+          React ve Tailwind CSS ile modern web uygulamaları geliştiriyorum.
+          Projelerime göz atmak için aşağıdaki butona tıklayın.
         </p>
         <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
           Projelerime Bak
