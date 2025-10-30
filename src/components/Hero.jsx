@@ -10,7 +10,11 @@ export default function Hero({ darkMode }) {
     >
       <div className="max-w-4xl mx-auto">
         {/* RESİM EKLE */}
-        <img src="/ysflx.jpg" alt="ysFLX Profile" />
+        <img
+          src="/ysflx.jpg"
+          alt="ysFLX Profile"
+          className="w-64 h-64 md:w-64 md:h-64 rounded-full mx-auto mb-8 shadow-2xl border-4 border-white dark:border-gray-800"
+        />
 
         <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6 drop-shadow-2xl tracking-tight">
           Merhaba, Ben ysFLX!
