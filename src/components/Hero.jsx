@@ -21,8 +21,12 @@ export default function Hero({ darkMode }) {
           Projelerime göz atmak için aşağıdaki butona tıklayın.
         </p>
         <button
-          onClick={() => (window.location.href = "/projects")}
-          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+          onClick={() => {
+            document
+              .getElementById("projects")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
         >
           Projelerime Bak
         </button>
