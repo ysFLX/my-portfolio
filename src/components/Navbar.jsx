@@ -4,7 +4,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            KankaDev
+            ysFLX
           </h1>
 
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center">
