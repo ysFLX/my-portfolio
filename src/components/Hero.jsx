@@ -9,7 +9,7 @@ export default function Hero({ darkMode }) {
       }`}
     >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-3xl font-black bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent mb-6">
+        <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent mb-6">
           Merhaba, Ben ysFLX!
         </h1>
         <p
