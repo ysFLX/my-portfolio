@@ -25,25 +25,25 @@ export default function Navbar({ darkMode, toggleDark }) {
             to="/"
             className={({ isActive }) => `${base} ${isActive ? active : ""}`}
           >
-            Home
+            Anasayfa
           </NavLink>
           <NavLink
             to="/about"
             className={({ isActive }) => `${base} ${isActive ? active : ""}`}
           >
-            About
+            Hakkımda
           </NavLink>
           <NavLink
             to="/projects"
             className={({ isActive }) => `${base} ${isActive ? active : ""}`}
           >
-            Projects
+            Projeler
           </NavLink>
           <NavLink
             to="/contact"
             className={({ isActive }) => `${base} ${isActive ? active : ""}`}
           >
-            Contact
+            İletişim
           </NavLink>
           <button
             onClick={toggleDark}
@@ -59,10 +59,10 @@ export default function Navbar({ darkMode, toggleDark }) {
             onChange={(e) => (window.location.href = e.target.value)}
             className="bg-transparent"
           >
-            <option value="/">Anasayfa</option>
-            <option value="/about">Hakkımda</option>
-            <option value="/projects">Projeler</option>
-            <option value="/contact">İletişim</option>
+            <option value="/">Home</option>
+            <option value="/about">About</option>
+            <option value="/projects">Projects</option>
+            <option value="/contact">Contact</option>
           </select>
         </div>
       </div>
