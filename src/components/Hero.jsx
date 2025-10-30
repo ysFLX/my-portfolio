@@ -30,21 +30,6 @@ export default function Hero({ darkMode, onProjectsClick }) {
           >
             Projelerime Bak
           </button>
-          <a
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              const el = document.getElementById("about");
-              el?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-            className={`px-6 py-4 rounded-full border ${
-              darkMode
-                ? "border-gray-600 text-gray-200"
-                : "border-gray-200 text-gray-700"
-            }`}
-          >
-            Hakkında
-          </a>
         </div>
       </div>
     </section>
