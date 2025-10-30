@@ -10,7 +10,7 @@ export default function Hero({ darkMode }) {
     >
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-          Merhaba, Ben Kanka!
+          Merhaba, Ben ysFLX!
         </h1>
         <p
           className={`text-xl md:text-2xl mb-8 ${
