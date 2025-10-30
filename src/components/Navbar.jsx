@@ -66,10 +66,10 @@ export default function Navbar({ darkMode, toggleDark }) {
             onChange={(e) => (window.location.href = e.target.value)}
             className="bg-transparent"
           >
-            <option value="/">Home</option>
-            <option value="/about">About</option>
-            <option value="/projects">Projects</option>
-            <option value="/contact">Contact</option>
+            <option value="/">Anasayfa</option>
+            <option value="/about">Hakkımda</option>
+            <option value="/projects">Projeler</option>
+            <option value="/contact">İletişim</option>
           </select>
         </div>
       </div>
