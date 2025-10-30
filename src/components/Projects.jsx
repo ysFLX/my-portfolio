@@ -2,16 +2,16 @@ import React from "react";
 
 const sample = [
   {
-    title: "Project A",
+    title: "Proje 1",
     desc: "Kısa açıklama, React + Tailwind projesi.",
     link: "#",
   },
   {
-    title: "Project B",
+    title: "Proje 2",
     desc: "Kısa açıklama, Vite + API entegrasyonu.",
     link: "#",
   },
-  { title: "Project C", desc: "Kısa açıklama, performans odaklı.", link: "#" },
+  { title: "Proje 3", desc: "Kısa açıklama, performans odaklı.", link: "#" },
 ];
 
 export default function Projects({ darkMode }) {
