@@ -1,45 +1,60 @@
-export default function Navbar({ darkMode, setDarkMode }) {
+import React from "react";
+
+export default function Navbar({ onNavigate, darkMode, toggleDark }) {
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+    <nav
+      className={`fixed w-full z-30 top-0 backdrop-blur bg-white/60 ${
+        darkMode ? "bg-gray-900/60" : ""
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <button
+            onClick={() => onNavigate("home")}
+            className="font-extrabold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+          >
             ysFLX
-          </h1>
+          </button>
+          <span
+            className={`hidden md:inline ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
+            React + Tailwind portfolio
+          </span>
+        </div>
 
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center">
-            <a
-              href="#home"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
-            >
-              Ana Sayfa
-            </a>
-            <a
-              href="#about"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
-            >
-              Hakkımda
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
-            >
-              Projeler
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
-            >
-              İletişim
-            </a>
+        <div className="hidden md:flex items-center space-x-6">
+          <button
+            onClick={() => onNavigate("about")}
+            className="hover:underline"
+          >
+            About
+          </button>
+          <button
+            onClick={() => onNavigate("projects")}
+            className="hover:underline"
+          >
+            Projects
+          </button>
+          <button
+            onClick={toggleDark}
+            aria-label="Toggle dark mode"
+            className="px-3 py-1 rounded-md border"
+          >
+            {darkMode ? "Light" : "Dark"}
+          </button>
+        </div>
 
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-xl hover:scale-110 transition"
-            >
-              {darkMode ? "Açık" : "Karanlık"}
-            </button>
-          </div>
+        <div className="md:hidden">
+          <select
+            onChange={(e) => onNavigate(e.target.value)}
+            className="bg-transparent"
+          >
+            <option value="home">Home</option>
+            <option value="about">About</option>
+            <option value="projects">Projects</option>
+          </select>
         </div>
       </div>
     </nav>

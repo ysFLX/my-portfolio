@@ -1,35 +1,52 @@
-import { useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import "./index.css";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+
   const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const scrollTo = (ref) =>
+    ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
-        darkMode ? "bg-gray-900" : "bg-gradient-to-br from-gray-50 to-gray-100"
-      }`}
+      className={
+        darkMode
+          ? "bg-gray-900 text-gray-100 min-h-screen"
+          : "bg-white text-gray-900 min-h-screen"
+      }
     >
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Hero darkMode={darkMode} />
-      <About darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
+      <Navbar
+        onNavigate={(section) => {
+          if (section === "home") scrollTo(homeRef);
+          if (section === "about") scrollTo(aboutRef);
+          if (section === "projects") scrollTo(projectsRef);
+        }}
+        darkMode={darkMode}
+        toggleDark={() => setDarkMode((s) => !s)}
+      />
+      <main>
+        <section ref={homeRef}>
+          <Hero
+            darkMode={darkMode}
+            onProjectsClick={() => scrollTo(projectsRef)}
+          />
+        </section>
+        <section ref={aboutRef}>
+          <About darkMode={darkMode} />
+        </section>
+        <section ref={projectsRef}>
+          <Projects darkMode={darkMode} />
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default App;

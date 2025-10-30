@@ -1,8 +1,9 @@
-export default function Hero({ darkMode }) {
+// ...existing code...
+export default function Hero({ darkMode, onProjectsClick }) {
   return (
     <section
       id="home"
-      className={`py-20 px-6 text-center ${
+      className={`pt-28 pb-20 px-6 text-center ${
         darkMode
           ? "bg-gray-800"
           : "bg-gradient-to-br from-blue-50 to-purple-100"
@@ -20,17 +21,33 @@ export default function Hero({ darkMode }) {
           React ve Tailwind CSS ile modern web uygulamaları geliştiriyorum.
           Projelerime göz atmak için aşağıdaki butona tıklayın.
         </p>
-        <button
-          onClick={() => {
-            document
-              .getElementById("projects")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-        >
-          Projelerime Bak
-        </button>
+        <div className="flex justify-center gap-4">
+          <button
+            type="button"
+            aria-label="Projelerime git"
+            onClick={onProjectsClick}
+            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+          >
+            Projelerime Bak
+          </button>
+          <a
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("about");
+              el?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className={`px-6 py-4 rounded-full border ${
+              darkMode
+                ? "border-gray-600 text-gray-200"
+                : "border-gray-200 text-gray-700"
+            }`}
+          >
+            Hakkında
+          </a>
+        </div>
       </div>
     </section>
   );
 }
+// ...existing code...

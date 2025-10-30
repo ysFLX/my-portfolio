@@ -1,26 +1,55 @@
+import React from "react";
+
 export default function About({ darkMode }) {
   return (
     <section
       id="about"
       className={`py-20 px-6 ${darkMode ? "bg-gray-900" : "bg-white"}`}
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2
-          className={`text-4xl font-bold mb-8 ${
-            darkMode ? "text-white" : "text-gray-800"
-          }`}
-        >
-          Hakkımda
-        </h2>
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-4">Hakkımda</h2>
         <p
-          className={`text-lg leading-relaxed max-w-2xl mx-auto ${
-            darkMode ? "text-gray-300" : "text-gray-600"
+          className={`max-w-3xl mx-auto ${
+            darkMode ? "text-gray-300" : "text-gray-700"
           }`}
         >
-          React ve Tailwind öğreniyorum. Hedefim:{" "}
-          <strong>3 ayda freelance alabilecek seviyeye gelmek</strong>. Her gün
-          kod yazıyorum, projeler yapıyorum. Sen de yapabilirsin!
+          Frontend geliştirme, React, Tailwind ve modern toolchain ile
+          ilgileniyorum. Kullanıcı deneyimi ve performans odaklı çözümler
+          üretmeyi seviyorum.
         </p>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            className={`p-6 rounded-lg shadow ${
+              darkMode ? "bg-gray-800" : "bg-gray-50"
+            }`}
+          >
+            <h3 className="font-semibold mb-2">React</h3>
+            <p className="text-sm">
+              Bileşen bazlı mimari ve state management tecrübem var.
+            </p>
+          </div>
+          <div
+            className={`p-6 rounded-lg shadow ${
+              darkMode ? "bg-gray-800" : "bg-gray-50"
+            }`}
+          >
+            <h3 className="font-semibold mb-2">Tailwind</h3>
+            <p className="text-sm">
+              Hızlı prototipleme ve tutarlı UI stilleri oluşturuyorum.
+            </p>
+          </div>
+          <div
+            className={`p-6 rounded-lg shadow ${
+              darkMode ? "bg-gray-800" : "bg-gray-50"
+            }`}
+          >
+            <h3 className="font-semibold mb-2">Performans</h3>
+            <p className="text-sm">
+              Ön yükleme, kod bölme ve optimizasyon konularına dikkat ediyorum.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
